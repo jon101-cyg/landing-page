@@ -406,6 +406,16 @@
   }
 </style>
 </head>
+<script>
+document.getElementById('downloadPage').addEventListener('click', function(e){
+  e.preventDefault();
+  const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'index.html';
+  link.click();
+});
+</script>
 <body>
 
 <div class="bg-layer"></div>
@@ -427,7 +437,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="#" class="btn btn-primary"><span class="long">Download</span> Resume</a>
+    <a href="#" id="downloadPage" class="btn btn-primary"><span class="long">Download</span> Resume</a>
     <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -448,7 +458,7 @@
 <section id="home" class="hero">
   <div class="wrap hero-inner">
     <div class="avatar-ring reveal">
-      <div class="avatar-inner"><span><img src="prof.jpg" class="shape-container"></span></div>
+      <div class="avatar-inner"><span><img src="Prof.jpg" class="shape-container"></span></div>
     </div>
     <div class="eyebrow-pill glass reveal"><span class="pulse"></span> Open to opportunities</div>
     <h1 class="reveal">JONCENA ZOLINA</h1>
@@ -609,7 +619,7 @@
         </div>
         <div class="contact-row">
           <div class="contact-ico">🌐</div>
-          <div><div class="lbl">Portfolio</div><div class="val">[Portfolio URL]</div></div>
+          <div><div class="lbl">Portfolio</div><div class="val">http://jon101-cyg.github.io/landing-page/</div></div>
         </div>
       </div>
 
