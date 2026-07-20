@@ -406,16 +406,6 @@
   }
 </style>
 </head>
-<script>
-document.getElementById('downloadPage').addEventListener('click', function(e){
-  e.preventDefault();
-  const blob = new Blob([document.documentElement.outerHTML], { type: 'text/html' });
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = 'index.html';
-  link.click();
-});
-</script>
 <body>
 
 <div class="bg-layer"></div>
@@ -437,7 +427,7 @@ document.getElementById('downloadPage').addEventListener('click', function(e){
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="#" id="downloadPage" class="btn btn-primary"><span class="long">Download</span> Resume</a>
+    <a href="resume.docx" download="resume.docx" class="btn btn-primary"><span class="long">Download</span> Resume</a>
     <button class="burger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
